@@ -1,0 +1,96 @@
+
+
+
+
+@media only screen and (min-width:1024px) {
+    .nav-container > div > ul li.active a {
+        color: #555 !important;
+      }
+    
+      body.dark .nav-container > div > ul li.active a {
+        color: #fff !important;
+      }
+      
+    
+      .navigation li > div a {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+      }
+    
+      .nav-container {
+        display: block;
+        height: 100%;
+      }
+    
+      .nav-container > div {
+        display: block;
+        height: 100%;
+      }
+    
+      body.dark .navigation li {
+        background: #333;
+      }
+  
+      .navigation li > div a {
+        display: table-cell;
+        vertical-align: middle;
+      }
+  
+    
+      body.dark .navigation li  a {
+        color: #fff;
+      }
+    
+      .navigation li:first-child {
+        display: none;
+      }
+    
+      .navigation li:nth-child(2) {
+        left: 24px;
+        top: 24px;
+      }
+    
+      .navigation li:nth-child(3) {
+        right: 24px;
+        top: 24px;
+      }
+    
+      .navigation li:nth-child(4) {
+        left: 24px;
+        bottom: 24px;
+      }
+    
+      .navigation li:nth-child(5) {
+        right: 24px;
+        bottom: 24px;
+      }
+    
+      .navigation a {
+        color: #555;
+        padding: 0;
+        text-transform: uppercase;
+        font-size: 28px;
+        font-weight: 600;
+      }
+    
+      .navigation li a i {
+        display: block;
+        margin-bottom: 15px;
+        font-size: 35px;
+      }
+      .navigation li {
+          position: fixed;
+          width: calc(30% - 36px);
+          height: calc(30% - 35px);
+          border-radius: 4px;
+          background: #eee;
+        }
+  
+      .navigation li > div {
+          display: table;
+          height: 100%;
+          width: 100%;
+      }
+
+}
