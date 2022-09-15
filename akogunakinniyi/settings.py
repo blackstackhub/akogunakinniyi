@@ -1,5 +1,5 @@
 from pathlib import Path
-from google.oauth2 import service_account
+#from google.oauth2 import service_account
 import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-j3cqw#hms46au!e1)nzhv$1p18f81-$dh-@tr17!qag3ptrg6n'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -94,6 +94,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 
+STATIC_URL = "static/"
+STATIC_ROOT = "staticfiles"
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+'''
+
 GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
     os.path.join(BASE_DIR, 'devfemibadmus-5c11c5220305.json')
 )
@@ -102,14 +110,6 @@ DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 GS_BUCKET_NAME = 'akogunakinniyi'
 GS_DEFAULT_ACL = "publicRead"
 
-'''
-STATIC_URL = "static/"
-STATIC_ROOT = "staticfiles"
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
-
-'''
 STATIC_URL = 'https://storage.googleapis.com/devfemibadmus/'
 STATIC_ROOT = "/static"
 
@@ -118,7 +118,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-
+'''
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
