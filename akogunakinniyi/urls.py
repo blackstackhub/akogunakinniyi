@@ -7,6 +7,3 @@ urlpatterns = [
     path('', include('home.urls')),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-urlpatterns = urlpatterns + [
-    re_path(r'.*', views.career, name="Home"),
-]
